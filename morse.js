@@ -1,4 +1,5 @@
 const input = document.querySelector(".input")
+const translate = document.querySelector(".translate")
 const output = document.querySelector(".output")
 const change = document.querySelector(".switch")
 const modev = document.querySelector(".modev")
@@ -29,7 +30,8 @@ const morse = {
   "x": "-..-",
   "y": "-.--",
   "z": "--..",
-  " ": "/"
+  " ": "/",
+  "": ""
 }
 
 change.addEventListener("click", () => {
@@ -42,8 +44,8 @@ change.addEventListener("click", () => {
   }
 })
 
-input.addEventListener("click", () => {
-  let i = prompt("input morse")
+translate.addEventListener("click", () => {
+  let i = input.value
   let o = ""
 
   if(mode == "morse"){
