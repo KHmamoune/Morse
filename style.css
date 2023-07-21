@@ -1,0 +1,61 @@
+body{
+  margin: 0;
+  background-color: burlywood;
+}
+
+button{
+  width: 90px;
+  height: 40px;
+  border: 0;
+  background-color: #441500;
+  border-radius: 15px;
+  color: whitesmoke;
+}
+
+button:hover{
+  background-color: #611e00;
+}
+
+.field{
+  display: block;
+  height: 100px;
+  width: 80vw;
+  padding: 5px;
+  margin-inline: auto;
+  border-radius: 10px;
+  background-color: gray;
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+.output:focus{
+  outline: none;
+}
+
+.header{
+  font-size: 40px;
+  background-color: #661f00;
+  height: 15vh;
+  display: flex;
+}
+
+.header-text{
+  margin: auto;
+  align-self: center;
+}
+
+.main{
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-block: 30px;
+}
+
+.btns{
+  display: flex;
+  justify-content: space-around;
+  width: 60vw;
+}
+

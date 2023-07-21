@@ -36,11 +36,11 @@ const morse = {
 
 change.addEventListener("click", () => {
   if(mode == "morse"){
-    mode = "string"
-    modev.textContent = "String to Morse"
+    mode = "ASCII"
+    modev.textContent = "ASCII to Morse"
   }else{
     mode = "morse"
-    modev.textContent = "Morse to String"
+    modev.textContent = "Morse to ASCII"
   }
 })
 
@@ -51,15 +51,27 @@ translate.addEventListener("click", () => {
   if(mode == "morse"){
     i = i.split(" ")
     for(let j=0; j<i.length; j++){
+
+      if(Object.keys(morse).find(key => morse[key] === i[j]) == undefined){
+        o = "couldn't translate to ASCII"
+        break
+      }
+
       o = o + Object.keys(morse).find(key => morse[key] === i[j])
     }
   }else{
     i = i.split("")
     for(let j=0; j<i.length; j++){
-      o = o + morse[i[j]] + " "
+
+      if(morse[i[j]] == undefined){
+        o = "couldn't translate to morse"
+        break
+      }
+
+      o = o + morse[i[j]] + "   "
     }
   }
 
-  output.textContent = o
+  output.value = o
 })
 

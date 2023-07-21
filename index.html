@@ -4,13 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="morse.js" defer></script>
+  <link rel="stylesheet" href="style.css">
   <title>Morse translator</title>
 </head>
 <body>
-  <div class="modev">Morse to String</div>
-  <input type="text" class="input" placeholder="insert your input">
-  <button class="switch">Switch</button>
-  <button class="translate">Translate</button>
-  <div class="output"></div>
-</body>
+  <div class="header">
+    <div class="header-text">Morse Translator</div>
+  </div>
+  <div class="main">
+    <input type="text" class="field input" placeholder="insert your input...">
+    <div class="btns">
+      <button class="switch">Switch</button>
+      <div class="modev">Morse to ASCII</div>
+      <button class="translate">Translate</button>
+    </div>
+    <input type="text" class="field output" placeholder="the output is displayed here..." readonly>
+  </div>
+  </body>
 </html>
